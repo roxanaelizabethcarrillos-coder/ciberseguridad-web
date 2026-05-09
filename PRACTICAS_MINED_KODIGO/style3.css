@@ -1,13 +1,9 @@
 CSS
-/* 
-    DISEÑO EMPRESARIAL MODERNO
-    Tipografía: Inter (San Serif limpia)
-    Paleta: Navy Deep, Sky Blue y Slate White.
-*/
+
 
 :root {
-  --bg-primary: #0f172a; /* Fondo oscuro pizarra */
-  --bg-secondary: #1e293b; /* Fondo de secciones/tarjetas */
+  --bg-primary: #535760; /* Fondo oscuro pizarra */
+  --bg-secondary: #4d525a; /* Fondo de secciones/tarjetas */
   --accent: #38bdf8; /* Azul brillante para acentos */
     --accent-hover: #0ea5e9;
   --text-main: #f1f5f9; /* Texto casi blanco */
@@ -146,7 +142,7 @@ section {
 }
 
 .bg-alt {
-        background-color: #0b0f19;
+        background-color: #313b35;
 }
 
 h2 {
@@ -156,7 +152,7 @@ h2 {
 }
 
 .badge {
-    background-color: rgba(56, 189, 248, 0.15);
+    background-color: rgba(213, 215, 216, 0.15);
     color: var(--accent);
     padding: 5px 15px;
     border-radius: 20px;
@@ -257,8 +253,12 @@ h2 {
     justify-content: center;
     border-radius: 50%;
 }
+SS
+/* =================================S
+   FORMULARIO CORREGIDO Y FUNCIONAL
+   ================================== */
 
-/* FORMULARIO PROFESIONAL */
+/* FORMULARIO*/
 .contact-section {
     background: linear-gradient(to bottom, var(--bg-primary), #537dd7);
 }
@@ -269,6 +269,7 @@ h2 {
     background-color: var(--bg-secondary);
     padding: 50px;
     border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra para dar profundidad */
 }
 
 .contact-header {
@@ -286,24 +287,43 @@ h2 {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: var(--text-muted);
+    color: var(--accent); /* Cambiado a azul para mejor visibilidad */
+    font-size: 0.9rem;
 }
 
 .input-group input,
 .input-group textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 14px 18px; /* Un poco más de aire */
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: #606162;
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Borde más definido */
+    background-color: #2f3032; /* Color más profundo y profesional */
     color: var(--white);
     font-family: inherit;
 }
 
+/* EFECTO CUANDO EL USUARIO ESCRIBE (FOCUS) */
 .input-group input:focus,
 .input-group textarea:focus {
+    /* fondo negro */
+    background-color: #1a1919 !important; 
+    
+    /* Letra color blanco puro al escribir */
+    color: #b0c1d8 !important; 
+    
+    /* Estética de borde y resplandor */
     border-color: var(--accent);
     outline: none;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4); /* Resplandor celeste acorde a tu marca */
+    
+    /* Efecto visual de enfoque */
+    transform: scale(1.01); 
+    transition: all 0.3s ease;
+}
+
+/* ESTILO PARA CAMPOS INVÁLIDOS (Feedback automático) */
+.input-group input:invalid:not(:placeholder-shown) {
+    border-color: #f87171; /* Rojo si el email está mal escrito */
 }
 
 .form-pro button {
@@ -313,14 +333,23 @@ h2 {
     border: none;
     border-radius: 8px;
     font-weight: 700;
+    font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
 }
 
 .form-pro button:hover {
     background-color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+.form-pro button:active {
+    transform: translateY(0); /* Efecto de presionar botón */
+}
 /* FOOTER */
 footer {
     padding: 80px 0 40px;
@@ -344,8 +373,28 @@ hr {
     margin: 40px 0;
 }
 
-.copyright {
+.Ciberseguridad {
     text-align: center;
     color: var(--text-muted);
     font-size: 0.9rem;
+}CSS
+
+
+.contact-header {
+    text-align: center; !important:
+    display: block  !important:
+    margin: 0 auto 30px auto; !important:
+    width: 100%; important:
+    
+}
+
+.contact-header h2 {
+    text-align: center;
+    
+}
+/* Cambiar color de los enlaces del menú a blanco */
+nav a, .navbar a, .nav-links a {
+    color: #ffffff !important;
+    text-decoration: none; 
+    font-weight: 500;      
 }

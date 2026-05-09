@@ -1,0 +1,393 @@
+CSS
+
+
+:root {
+  --bg-primary: #aab8da; /* Fondo oscuro pizarra */
+  --bg-secondary: #9bb3d8; /* Fondo de secciones/tarjetas */
+  --accent: #38bdf8; /* Azul brillante para acentos */
+    --accent-hover: #0ea5e9;
+  --text-main: #f1f5f9; /* Texto casi blanco */
+  --text-muted: #94a3b8; /* Texto gris suave */
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER HERO */
+header {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #9fabc9 40%, rgba(187, 191, 200, 0.4));
+}
+
+header .container {
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+header h1 span {
+    color: var(--accent);
+}
+
+header p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--white);
+    transform: translateY(-3px);
+}
+/* NAVEGACIÓN */
+nav {
+    background-color: rgba(99, 130, 130, 0.95);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(139, 155, 155, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* SECCIONES GENERALES */
+section {
+    padding: 100px 0;
+}
+
+.bg-alt {
+        background-color: #5c606c;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.badge {
+    background-color: rgba(132, 144, 149, 0.15);
+    color: var(--accent);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* FLEX LAYOUTS */
+.flex-row {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.flex-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-block {
+    flex: 1;
+}
+
+.img-block {
+    flex: 1;
+}
+
+.img-block img,
+.img-full img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(158, 141, 141, 0.4);
+}
+
+/* TARJETAS */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(217, 201, 201, 0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-10px);
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: var(--text-muted);
+}
+
+/* LISTAS ESTILIZADAS */
+.styled-list {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.styled-list li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.styled-list i {
+    color: var(--accent);
+    background-color: rgba(211, 223, 218, 0.1);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}* FORMULARIO*/
+.contact-section {
+    background: linear-gradient(to bottom, var(--bg-primary), #537dd7);
+}
+
+.contact-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-secondary);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(189, 192, 203, 0.3); /* Sombra para dar profundidad */
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-pro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--accent); /* Cambiado a azul para mejor visibilidad */
+    font-size: 0.9rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 14px 18px; /* Un poco más de aire */
+    border-radius: 8px;
+    border: 2px solid rgba(197, 199, 193, 0.1); /* Borde más definido */
+    background-color: #2f3032; /* Color más profundo y profesional */
+    color: var(--white);
+    font-family: inherit;
+}
+
+/* EFECTO CUANDO EL USUARIO ESCRIBE (FOCUS) */
+.input-group input:focus,
+.input-group textarea:focus {
+    /* fondo negro */
+    background-color: #e3e5eb !important; 
+    
+    /* Letra color blanco puro al escribir */
+    color: #333639 !important; 
+    
+    /* Estética de borde y resplandor */
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4); /* Resplandor celeste acorde a tu marca */
+    
+    /* Efecto visual de enfoque */
+    transform: scale(1.01); 
+    transition: all 0.3s ease;
+}
+
+/* ESTILO PARA CAMPOS INVÁLIDOS (Feedback automático) */
+.input-group input:invalid:not(:placeholder-shown) {
+    border-color: #f87171; /* Rojo si el email está mal escrito */
+}
+
+.form-pro button {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.form-pro button:hover {
+    background-color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.form-pro button:active {
+    transform: translateY(0);
+}
+/* FOOTER */
+footer {
+    padding: 80px 0 40px;
+    background-color: #365b42;
+    text-align: left;
+}
+
+.logo-white {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.logo-white span {
+    color: var(--accent);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 40px 0;
+}
+
+.Ciberseguridad {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}CSS
+
+
+.contact-header {
+    text-align: center; !important:
+    display: block  !important:
+    margin: 0 auto 30px auto; !important:
+    width: 100%; important:
+    
+}
+
+.contact-header h2 {
+    text-align: center;
+    
+}
+/* Cambiar color de los enlaces del menú a blanco */
+nav a, .navbar a, .nav-links a {
+    color: #ffffff !important;
+    text-decoration: none; 
+    font-weight: 500;      
+}
